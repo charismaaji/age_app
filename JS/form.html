@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form
+      onsubmit="enter(event)"
+      action=""
+      class="user_form"
+      style="
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 80px;
+        gap: 10px;
+        padding: 20px;
+        box-shadow: 3px 3px 5px rgb(0, 0, 0, 0 200);
+      "
+    >
+      <label for="username">username</label>
+      <input type="text" id="username" />
+
+      <label for="email">email</label>
+      <input type="text" id="email" />
+
+      <label for="moto">moto</label>
+      <textarea name="" id="moto" cols="30" rows="10"></textarea>
+
+      <button type="submit">submit</button>
+    </form>
+
+    <script>
+      // wellcome text
+      console.log("thanks for using javascript..");
+
+      // buat sebuah function submit
+      function enter(event) {
+        //   event preventDefault buat form tidak mengirim data ke page lain
+        event.preventDefault();
+
+        // menangkap value dari username
+        let username = document.getElementById("username").value;
+        let email = document.getElementById("email").value;
+        let moto = document.getElementById("moto").value;
+        alert(`username: ${username} \nemail: ${email} \nmoto: ${moto}`);
+      }
+    </script>
+  </body>
+</html>
